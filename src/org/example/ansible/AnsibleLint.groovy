@@ -1,4 +1,4 @@
-package org.mygurukulam.ansible
+package org.example.ansible
 def call(String path) {
     stage('ansible-lint') {
         script {
