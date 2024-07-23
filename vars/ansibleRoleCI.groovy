@@ -18,7 +18,7 @@ def call(Map params) {
             stage('Clone Repository') {
                 steps {
                     script {
-                        new Checkout().call('https://github.com/Siddharth2419/CI.git', 'github-token', 'main')
+                        new Checkout().call('https://github.com/mygurkulam-p9/ansible-playbooks.git', 'github-token', 'main')
                     }
                 }
             }
