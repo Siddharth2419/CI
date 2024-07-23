@@ -9,7 +9,7 @@ def call(Map params) {
         agent any
 
         environment {
-            GITHUB_TOKEN = credentials('github-token') // Ensure this matches your Jenkins credential ID
+            GITHUB_TOKEN = credentials('github') // Ensure this matches your Jenkins credential ID
             LC_ALL = 'en_US.UTF-8'
             LANG = 'en_US.UTF-8'
         }
@@ -18,7 +18,7 @@ def call(Map params) {
             stage('Clone Repository') {
                 steps {
                     script {
-                        new Checkout().call('github.com/mygurkulam-p9/ansible-playbooks.git', 'github-token', 'main')
+                        new Checkout().call('https://github.com/Siddharth2419/CI.git', 'github-token', 'main')
                     }
                 }
             }
