@@ -1,0 +1,17 @@
+---
+- name: Install Nginx
+  apt:
+    name: nginx
+    state: present
+    update_cache: yes
+
+- name: Start Nginx service
+  service:
+    name: nginx
+    state: started
+    enabled: true
+
+- name: Create index.html
+  copy:
+    content: "Hello, Nginx is running!"
+    dest: /var/www/html/index.html
